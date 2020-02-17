@@ -109,6 +109,16 @@ export default class Presentation extends React.Component {
             <a style={{color: '#333333'}} href="https://www.youtube.com/watch?v=06--kezKc0Q" target="_blank" rel="noopener noreferrer">Expressive Eloquence Collections</a>
           </Text>
         </Slide>
+        <Slide>
+          <Heading fit caps textColor="secondary">
+            Thank You!
+          </Heading>
+          <Text margin="10px 0 0" textColor="tertiary" size={ 1 } fit bold>
+            Slides Accessible at:<br />
+
+            <a style={ { color: '#333333' } } href="https://eloquent-deep-dive.patrickstephan.me/" target="_blank" rel="noopener noreferrer">https://eloquent-deep-dive.patrickstephan.me/</a>
+          </Text>
+        </Slide>
       </Deck>
     );
   }
