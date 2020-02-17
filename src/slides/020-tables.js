@@ -13,7 +13,7 @@ import {
 
 export default <Slide bgColor="light">
   <Text fit bold caps>Models derive their table from the class name.</Text>
-  <Text textSize={ 18 }>(Pluralized camel case)</Text>
+  <Text textSize={ 18 }>(Pluralized snake case)</Text>
   <Table padding="20px" bgColor="tertiary" textAlign="left" textColor="light">
     <TableHeader>
       <TableRow>
