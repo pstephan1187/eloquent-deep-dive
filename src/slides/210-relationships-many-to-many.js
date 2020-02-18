@@ -30,9 +30,9 @@ const tables = `- companies
 
 - company_people
   - company_id
-  - people_id
-
-`;
+  - person_id
+  - position
+  - hire_date`;
 
 const pivots = `
 return $this->belongsToMany(Company::class)->withPivot(['position', 'hire_date']);

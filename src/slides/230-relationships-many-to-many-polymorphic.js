@@ -9,27 +9,31 @@ import {
 } from 'spectacle';
 
 const casting = `class Post extends Model {
-  public function image() {
-    return $this->morphedByMany(Image::class, 'taggable');
+  public function tags() {
+    return $this->morphToMany(Tag::class, 'taggable');
   }
 }
 
 class Page extends Model {
-  public function image() {
-    return $this->morphedByMany(Image::class, 'taggable');
+  public function tags() {
+    return $this->morphToMany(Tag::class, 'taggable');
   }
 }
 
 class Tag extends Model {
-  public function imageable() {
-    return $this->morphToMany(Tag::class, 'taggable');
+  public function posts() {
+    return $this->morphedByMany(Post::class, 'taggable');
+  }
+
+  public function pages() {
+    return $this->morphedByMany(Page::class, 'taggable');
   }
 }`;
 
 const tables = `- posts
   - id
 
-- users
+- pages
   - id
 
 - tags
@@ -37,8 +41,12 @@ const tables = `- posts
 
 - taggables
   - tag_id
-  - post_id
-  - user_id
+  - taggable_id
+  - taggable_type
+
+
+
+
 
 
 
